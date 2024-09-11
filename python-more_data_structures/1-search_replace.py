@@ -1,5 +1,13 @@
 #!/usr/bin/python3
 def search_replace(my_list, search, replace):
 
-    list2 = [replace if element == search else element for element in list2]
-    return list2
+    new_list = [replace if element == search else element for element in my_list]
+    return new_list
+
+search_replace = __import__('1-search_replace').search_replace
+
+my_list = [1, 2, 3, 4, 5, 4, 2, 1, 1, 4, 89]
+new_list = search_replace(my_list, 2, 89)
+
+print(new_list)
+print(my_list)
