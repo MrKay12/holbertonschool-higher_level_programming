@@ -1,6 +1,12 @@
 """
 Test cases for the `add_integer` function.
 
+You import the programm using this line and then add 2 integers together:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> print(add_integer(1, 2))
+    3
+
 
 Basic tests:
 
