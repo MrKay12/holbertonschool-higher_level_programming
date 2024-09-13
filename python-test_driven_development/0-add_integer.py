@@ -5,8 +5,8 @@ Define function for integer addition
 
 
 def add_integer(a, b=98):
-    """Adds two integers.
-
+    """
+    Adds two integers.
     Raises: TypeError: If a or b is not an integer or float.
     Returns: int: The sum of a and b, after casting floats to integers.
     """
