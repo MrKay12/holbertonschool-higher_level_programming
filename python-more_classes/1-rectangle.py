@@ -4,7 +4,7 @@
 
 class Rectangle:
     """
-    Class that represent a square.
+    Class that represent a Rectangle.
     """
 
     def __init__(self, width=0, height=0):
