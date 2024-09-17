@@ -28,9 +28,8 @@ class Square:
         position : tuple, optional
             The position of the square (default is (0, 0)).
         """
-        self.size = size  # Using setter to validate size
-        self.position = position  # Using setter to validate position
-
+        self._size = size
+        self._position = position
     @property
     def size(self):
         """
