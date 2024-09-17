@@ -10,9 +10,10 @@ class Square:
     ----------
     size : int
         The size of one side of the square (must be an integer >= 0).
-    
+
     position : tuple
-        The position of the square when printed (must be a tuple of two positive integers).
+        The position of the square when printed
+        (must be a tuple of two positive integers).
     """
 
     def __init__(self, size=0, position=(0, 0)):
@@ -45,7 +46,8 @@ class Square:
     @size.setter
     def size(self, value):
         """
-        Setter for the size of the square. Ensures the size is a non-negative integer.
+        Setter for the size of the square.
+        Ensures the size is a non-negative integer.
 
         Parameters:
         ----------
@@ -73,19 +75,22 @@ class Square:
         Returns:
         -------
         tuple
-            The current position of the square (horizontal and vertical offset).
+            The current position of the square
+            (horizontal and vertical offset).
         """
         return self._position
 
     @position.setter
     def position(self, value):
         """
-        Setter for the position of the square. Ensures position is a tuple of two positive integers.
+        Setter for the position of the square.
+        Ensures position is a tuple of two positive integers.
 
         Parameters:
         ----------
         value : tuple
-            A tuple with two positive integers representing the position of the square.
+            A tuple with two positive integers
+            representing the position of the square.
 
         Raises:
         ------
@@ -110,7 +115,8 @@ class Square:
 
     def my_print(self):
         """
-        Prints the square using the '#' character. The position is respected with spaces.
+        Prints the square using the '#' character.
+        The position is respected with spaces.
 
         If the size is 0, an empty line is printed.
         """
@@ -122,20 +128,3 @@ class Square:
 
             for _ in range(self.size):
                 print("_" * self._position[0] + "#" * self.size)
-
-Square = __import__('6-square').Square
-
-my_square_1 = Square(3)
-my_square_1.my_print()
-
-print("--")
-
-my_square_2 = Square(3, (1, 1))
-my_square_2.my_print()
-
-print("--")
-
-my_square_3 = Square(3, (3, 0))
-my_square_3.my_print()
-
-print("--")
