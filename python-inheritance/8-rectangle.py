@@ -22,7 +22,7 @@ class Rectangle(BaseGeometry):
 
     def __init__(self, width, height):
         """Initialize with width and height after validation.
-        
+
         Args:
             width (int): The width of the new Rectangle.
             height (int): The height of the new Rectangle.
