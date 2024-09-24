@@ -27,7 +27,6 @@ class BaseGeometry:
 
 class Rectangle(BaseGeometry):
     """Rectangle class that inherits from BaseGeometry."""
-
     def __init__(self, width, height):
         """Initialize with width and height after validation.
 
