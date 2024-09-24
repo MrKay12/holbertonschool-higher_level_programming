@@ -44,7 +44,10 @@ class Circle(Shape):
         Initialize a Circle with the given radius.
 
         Args:
-        radius (float): The radius of the circle.
+        radius (float): The radius of the circle. Must be non-negative.
+
+        Raises:
+        ValueError: If radius is negative.
         """
         if radius < 0:
             raise ValueError("radius cannot be negative")
@@ -83,8 +86,11 @@ class Rectangle(Shape):
         Initialize a Rectangle with the given width and height.
 
         Args:
-        width (float): The width of the rectangle.
-        height (float): The height of the rectangle.
+        width (float): The width of the rectangle. Must be non-negative.
+        height (float): The height of the rectangle. Must be non-negative.
+
+        Raises:
+        ValueError: If width or height is negative.
         """
         if width < 0 or height < 0:
             raise ValueError("width and height cannot be negative")
