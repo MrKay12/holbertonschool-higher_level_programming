@@ -7,6 +7,10 @@ class Square(Rectangle):
     """Square class that inherits from Rectangle."""
 
     def __init__(self, size):
-        """Initialize square with size."""
+        """Initialize square with size.
+        
+        Args:
+            size (int): The size of the new square.
+        """
         super().__init__(size, size)
         self.__size = size
