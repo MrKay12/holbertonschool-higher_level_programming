@@ -11,6 +11,7 @@ class BaseGeometry:
 
     def integer_validator(self, name, value):
         """Validate if value is an integer greater than 0.
+
         Args:
             name (str): The name of the parameter.
             value (int): The parameter to validate.
