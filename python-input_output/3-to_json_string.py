@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import json
+
 """Args:
         my_obj: The Python object to convert to a JSON string.
 
