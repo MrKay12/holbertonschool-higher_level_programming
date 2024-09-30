@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 """
-    Writes a string to a text file (UTF8) and returns
-    the number of characters written.
-
     Args:
         filename (str): The name of the file to write to.
         text (str): The string to write to the file.
