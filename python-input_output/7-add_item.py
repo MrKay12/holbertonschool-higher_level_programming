@@ -8,6 +8,7 @@ If the file does not exist, it initializes an empty list.
 import sys
 import json
 
+
 if __name__ == "__main__":
     """insert some doc here"""
 
