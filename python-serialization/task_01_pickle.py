@@ -1,5 +1,10 @@
 #!/usr/bin/python3
+
+""" some doc goes right here"""
+
+
 import pickle
+
 
 class CustomObject:
     """A custom Python class representing a person"""
