@@ -11,11 +11,11 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
         self.end_headers()
 
         if self.path == '/':
-            response = {"message": "Hello, this is a simple API!"}
+            self.wfile.write(b"Hello, this is a simple API!")
         elif self.path == '/data':
             response = {"name": "John", "age": 30, "city": "New York"}
         elif self.path == '/status':
-            response = {"status": "OK"}
+            self.wfile.write(b"OK")
         else:
             self.send_response(404)
             self.wfile.write(b"Endpoint not found")
