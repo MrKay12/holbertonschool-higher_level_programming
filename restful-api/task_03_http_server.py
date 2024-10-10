@@ -1,10 +1,11 @@
 #!/usr/bin/python3
+"""testing if we need documentation"""
 import json
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 
 class SimpleAPIHandler(BaseHTTPRequestHandler):
-
+    """testing if we need documentation"""
     def do_GET(self):
         self.send_response(200)
         self.send_header('Content-type', 'application/json')
@@ -24,6 +25,7 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
 
 
 def run(server_class=HTTPServer, handler_class=SimpleAPIHandler, port=8000):
+    """testing if we need documentation"""
     server_address = ('', port)
     httpd = server_class(server_address, handler_class)
     print(f"Starting server on port {port}...")
@@ -31,4 +33,5 @@ def run(server_class=HTTPServer, handler_class=SimpleAPIHandler, port=8000):
 
 
 if __name__ == "__main__":
+    """testing if we need documentation"""
     run()
