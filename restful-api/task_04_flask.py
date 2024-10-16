@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-""" put description here"""
 from flask import Flask, jsonify, request, json
 
 
@@ -9,26 +8,22 @@ users = {}
 
 @app.route('/')
 def home():
-    """ put description here"""
     return "Welcome to the Flask API!"
 
 
 @app.route('/data')
 def get_usernames():
-    """ put description here"""
     usernames = list(users.keys())
     return jsonify(usernames)
 
 
 @app.route('/status')
 def status():
-    """ put description here"""
     return "OK"
 
 
 @app.route('/users/<username>')
 def get_user(username):
-    """ put description here"""
     user = users.get(username)
     if user:
         return jsonify(user)
@@ -38,7 +33,6 @@ def get_user(username):
 
 @app.route('/add_user', methods=['POST'])
 def add_user():
-    """ put description here"""
     data = request.get_json()
     username = data.get('username')
 
@@ -50,5 +44,4 @@ def add_user():
 
 
 if __name__ == "__main__":
-    """ put description here"""
     app.run(debug=True)
