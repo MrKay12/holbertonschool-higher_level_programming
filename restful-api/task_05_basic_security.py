@@ -77,7 +77,7 @@ def admin_only():
     if current_user not in users:
         return jsonify({"error": "User not found"}), 404
 
-    if current_user['role'] != 'admin':
+    if users[current_user]['role'] != 'admin':
         return jsonify({"error": "Admin access required"}), 403
     return "Admin Access: Granted"
 
@@ -107,5 +107,5 @@ def handle_needs_fresh_token_error(err):
     return jsonify({"error": "Fresh token required"}), 401
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run()
