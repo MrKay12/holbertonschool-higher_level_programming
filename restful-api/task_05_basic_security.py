@@ -47,13 +47,14 @@ app.config['JWT_SECRET_KEY'] = 'your_secret_key'
 jwt = JWTManager(app)
 
 
-@app.route("/login", methods=["POST"])
+@app.route("/login", methods=['POST'])
 def login():
     username = request.json.get('username', None)
     password = request.json.get('password', None)
 
     if not username or not password:
         return jsonify({"message": "Missing username or password"}), 400
+
     user = users.get(username)
     if user and check_password_hash(user['password'], password):
         access_token = create_access_token(identity=username)
@@ -72,8 +73,10 @@ def jwt_protected():
 @jwt_required()
 def admin_only():
     current_user = get_jwt_identity()
+
     if current_user not in users:
         return jsonify({"error": "User not found"}), 404
+
     if current_user['role'] != 'admin':
         return jsonify({"error": "Admin access required"}), 403
     return "Admin Access: Granted"
