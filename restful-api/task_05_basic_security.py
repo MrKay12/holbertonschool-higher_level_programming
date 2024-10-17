@@ -32,13 +32,13 @@ def verify_password(username, password):
 
 @app.route('/')
 def home():
-    return "Welcome to the Flask API!"
+   return "Welcome to the Flask API!"
 
 
 @app.route('/basic-protected')
 @auth.login_required
 def basic_protected():
-    return "Basic Auth: Access Granted"
+   return "Basic Auth: Access Granted"
 
 
 app.config['JWT_SECRET_KEY'] = 'your_secret_key'
@@ -77,27 +77,28 @@ def admin_only():
 
 @jwt.unauthorized_loader
 def handle_unauthorized_error(err):
-      return jsonify({"error": "Missing or invalid token"}), 401
+    return jsonify({"error": "Missing or invalid token"}), 401
 
 
 @jwt.invalid_token_loader
 def handle_invalid_token_error(err):
-      return jsonify({"error": "Invalid token"}), 401
+    return jsonify({"error": "Invalid token"}), 401
 
 
 @jwt.expired_token_loader
 def handle_expired_token_error(err):
-      return jsonify({"error": "Token has expired"}), 401
+    return jsonify({"error": "Token has expired"}), 401
 
 
 @jwt.revoked_token_loader
 def handle_revoked_token_error(err):
-      return jsonify({"error": "Token has been revoked"}), 401
+    return jsonify({"error": "Token has been revoked"}), 401
 
 
 @jwt.needs_fresh_token_loader
 def handle_needs_fresh_token_error(err):
-      return jsonify({"error": "Fresh token required"}), 401
+    return jsonify({"error": "Fresh token required"}), 401
+
 
 if __name__ == '__main__':
     app.run()
