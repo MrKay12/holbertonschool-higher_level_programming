@@ -5,8 +5,6 @@ from flask_httpauth import HTTPBasicAuth
 from flask_jwt_extended import JWTManager, create_access_token
 from flask_jwt_extended import jwt_required, get_jwt_identity
 
-app = Flask(__name__)
-auth = HTTPBasicAuth()
 
 users = {
       "user1": {
@@ -20,6 +18,10 @@ users = {
           "role": "admin"
           }
       }
+
+
+app = Flask(__name__)
+auth = HTTPBasicAuth()
 
 
 @auth.verify_password
