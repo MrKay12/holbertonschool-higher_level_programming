@@ -22,7 +22,8 @@ users = {
 
 @auth.verify_password
 def verify_password(username, password):
-    if username in users and check_password_hash(users[username]['password'], password):
+    user = users.get(username)
+    if user and check_password_hash(user["password"], password):
         return username
     return None
     
