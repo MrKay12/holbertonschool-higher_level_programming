@@ -32,13 +32,13 @@ def verify_password(username, password):
 
 @app.route('/')
 def home():
-   return "Welcome to the Flask API!"
+    return "Welcome to the Flask API!"
 
 
 @app.route('/basic-protected')
 @auth.login_required
 def basic_protected():
-   return "Basic Auth: Access Granted"
+    return "Basic Auth: Access Granted"
 
 
 app.config['JWT_SECRET_KEY'] = 'your_secret_key'
