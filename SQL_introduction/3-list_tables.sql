@@ -1,2 +1,2 @@
--- list Table in database you selected
-SHOW TABLE from mysql;
+-- list all Tables in database you selected
+SHOW Tables from mysql;
