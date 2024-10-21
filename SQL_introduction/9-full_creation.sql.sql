@@ -1,7 +1,5 @@
--- create a table 
+-- create a table + insert multiple row
 CREATE TABLE IF NOT EXISTS second_table (id INT, name VARCHAR(256), score INT);
-
--- Insert multiple row
 INSERT INTO second_table (id, name, score) VALUES
 (1, "Jhon", 10),
 (2, "Alex", 3),
