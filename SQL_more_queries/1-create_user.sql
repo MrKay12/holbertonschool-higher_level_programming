@@ -1,4 +1,3 @@
 -- script that creates the MySQL server user user_0d_1
-CREATE DATABASE IF NOT EXIST hbtn_0c_0;
 CREATE USER IF NOT EXIST 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';
-GRANT SELECT ON hbtn_0c_0.* TO 'user_0d_1'@'localhost';
+GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost';
