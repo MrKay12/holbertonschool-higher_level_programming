@@ -2,5 +2,5 @@
 create DATABASE IF not exists hbtn_0d_usa;
 create table if not exists hbtn_0d_usa.states (
     id INT IDENTITY(1,1) UNIQUE not null PRIMARY KEY,
-    name VARCHAR not null(256)
+    name VARCHAR(256) not null
 );
