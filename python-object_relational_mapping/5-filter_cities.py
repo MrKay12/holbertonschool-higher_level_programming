@@ -25,6 +25,6 @@ if __name__ == "__main__":
     cur.execute(query)
     rows = cur.fetchall()
     for row in rows:
-        print(", ".join([city[0] for city in rows]))
+        print(f"{row[0]}: ({row[1]}) {row[2]}")
     cur.close()
     db.close()
