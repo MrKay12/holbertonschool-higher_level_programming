@@ -16,15 +16,12 @@ if __name__ == "__main__":
         port=3306
         )
     cur = db.cursor()
-    query = """
-    SELECT states.name, cities.id, cities.name
-    FROM cities
-    JOIN states ON cities.state_id = states.id
-    ORDER BY cities.id ASC;
-    """
-    cur.execute(query)
+    cur.execute("SELECT cities.name FROM cities \
+                JOIN states ON cities.state_id = states.id \
+                WHERE states.name = %s \
+                ORDER BY cities.id ASC", (sys.argv[4],))
     rows = cur.fetchall()
     for row in rows:
-        print(f"{row[0]}: ({row[1]}) {row[2]}")
+        print(", ".join([city[0] for city in rows]))
     cur.close()
     db.close()
